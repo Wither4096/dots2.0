@@ -30,9 +30,7 @@ cp $RUNDIR/.Xresources $HOME
 
 cp $RUNDIR/vencord-settings-backup.json $HOME
 
-mkdir $HOME/.local/bin/
-
-mv $RUNDIR/.local/bin/* $HOME/.local/bin
+cp $RUNDIR/.local/bin $HOME/.local
 
 git clone https://aur.archlinux.org/yay.git
 
@@ -46,7 +44,7 @@ yay -S vscodium-bin openrgb-bin rofi-greenclip betterlockscreen ani-cli mpd-mpri
 
 #yay -S spotify
 
-sudo cp $RUNDIR/X11/* /etc/X11
+sudo cp $RUNDIR/X11/ /etc/
 
 cp /etc/default/grub ~/
 
