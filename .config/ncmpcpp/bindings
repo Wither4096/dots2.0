@@ -1,0 +1,6 @@
+def_key "="
+  volume_up
+def_key "+"
+  show_clock
+def_key "0"
+  set_volume
