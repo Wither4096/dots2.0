@@ -1,7 +1,7 @@
 #!/bin/sh
 
-music_dir="/storage/Music"
-previewdir="/storage/Music/Previews/"
+music_dir="/storage/Media/Music"
+previewdir="/storage/Media/Music/Previews/"
 filename="$(mpc --format "$music_dir"/%file% current)"
 previewname="$previewdir/$(mpc --format %album% current | base64).png"
 
