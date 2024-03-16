@@ -14,6 +14,9 @@ statusbar_color = "cyan"
 current_item_inactive_column_prefix = "$(magenta)"
 current_item_inactive_column_suffix = "$(end)"
 
+volume_change_step = 1
+mouse_support = "no"
+
 visualizer_data_source = "/tmp/mpd.fifo"
 visualizer_output_name = "my_fifo"
 visualizer_in_stereo = "yes"
