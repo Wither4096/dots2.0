@@ -241,7 +241,7 @@ exec_always greenclip daemon
 bindsym $mod+Shift+v exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 #EasyEffects
-exec_always .local/bin/audioconfig.sh
+#exec_always .local/bin/audioconfig.sh
 
 #Always on screen
 exec --no-startup-id xset s off
