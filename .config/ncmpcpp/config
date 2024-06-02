@@ -16,6 +16,9 @@ current_item_inactive_column_suffix = "$(end)"
 
 volume_change_step = 1
 mouse_support = "no"
+seek_time = 5
+incremental_seeking = "no"
+display_bitrate = "yes"
 
 visualizer_data_source = "/tmp/mpd.fifo"
 visualizer_output_name = "my_fifo"
@@ -26,6 +29,13 @@ visualizer_look = "+|"
 mpd_music_dir = "/storage/Media/Music"
 lyrics_directory = "/storage/Media/Music/Lyrics"
 external_editor = "vim"
+ignore_diacritics = "yes"
 
 execute_on_song_change = ~/.local/bin/songinfo.sh
 user_interface = alternative
+media_library_primary_tag = album_artist
+
+startup_screen = playlist 
+startup_slave_screen = visualizer  
+startup_slave_screen_focus = no
+locked_screen_width_part = 75
