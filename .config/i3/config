@@ -222,8 +222,8 @@ exec_always feh --bg-fill $HOME/.wallpapers/wallpaper.png
 
 #Gaps
 for_window [class=".*"] border pixel 1
-gaps inner 15
-gaps outer 15
+gaps inner 10
+gaps outer 10
 
 #Window Compositor
 #exec_always picom -f --vsync --blur-background 
@@ -234,14 +234,15 @@ bindsym --release $mod+Print exec import -window root png:-|tee $HOME/Pictures/S
 
 #OpenRGB
 #exec openrgb -p "Cotton Candy"
-exec openrgb -p Royal\ Gold
+#exec openrgb -p Royal\ Gold
 
 #Greenclip
-exec_always greenclip daemon
+exec_always greenclip clear
+exec greenclip daemon
 bindsym $mod+Shift+v exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 #EasyEffects
-#exec_always .local/bin/audioconfig.sh
+exec_always .local/bin/audioconfig.sh
 
 #Always on screen
 exec --no-startup-id xset s off
