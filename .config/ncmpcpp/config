@@ -21,7 +21,7 @@ incremental_seeking = "no"
 display_bitrate = "yes"
 
 visualizer_data_source = "/tmp/mpd.fifo"
-visualizer_output_name = "my_fifo"
+visualizer_output_name = "visualiser"
 visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
 visualizer_look = "+|"
@@ -35,7 +35,7 @@ execute_on_song_change = ~/.local/bin/songinfo.sh
 user_interface = alternative
 media_library_primary_tag = album_artist
 
-startup_screen = playlist 
-startup_slave_screen = visualizer  
-startup_slave_screen_focus = no
-locked_screen_width_part = 75
+startup_screen = visualizer  
+startup_slave_screen = playlist 
+startup_slave_screen_focus = "yes"
+locked_screen_width_part = 25
