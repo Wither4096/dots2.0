@@ -26,8 +26,8 @@ visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
 visualizer_look = "+|"
 
-mpd_music_dir = "/storage/Media/Music"
-lyrics_directory = "/storage/Media/Music/Lyrics"
+mpd_music_dir = "/drives/storage/Media/Music"
+lyrics_directory = "/drives/storage/Media/Music/Lyrics"
 external_editor = "vim"
 ignore_diacritics = "yes"
 
