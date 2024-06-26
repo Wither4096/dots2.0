@@ -1,6 +1,6 @@
 #!/bin/sh
 
-music_dir="/storage/Media/Music"
+music_dir="/drives/storage/Media/Music"
 previewdir="$HOME/.cache/"
 filename="$(mpc --format "$music_dir"/%file% current)"
 previewname="$previewdir/ncmpcppcover.png"
