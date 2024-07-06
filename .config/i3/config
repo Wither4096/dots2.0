@@ -229,8 +229,8 @@ gaps outer 10
 #exec_always picom -f --vsync --blur-background 
 
 #Screenshot
-bindsym --release Print exec import png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S").png|xclip -selection clipboard -t image/png
-bindsym --release $mod+Print exec import -window root png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S")-full.png|xclip -selection clipboard -t image/png
+bindsym --release $mod+Shift+s exec import png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S").png|xclip -selection clipboard -t image/png
+bindsym --release Print exec import -window root png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S")-full.png|xclip -selection clipboard -t image/png
 
 #OpenRGB
 #exec openrgb -p "Cotton Candy"
