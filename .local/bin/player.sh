@@ -9,7 +9,7 @@ PARENT_BAR_PID=$(pgrep -a "polybar" | grep "$PARENT_BAR" | cut -d" " -f1)
 # Examples: spotify, vlc, chrome, mpv and others.
 # Use `playerctld` to always detect the latest player.
 # See more here: https://github.com/altdesktop/playerctl/#selecting-players-to-control
-PLAYER="spotify,mpd"
+PLAYER="Feishin,spotify,mpd"
 
 # Format of the information displayed
 # Eg. {{ artist }} - {{ album }} - {{ title }}
@@ -20,7 +20,7 @@ FORMAT="{{ title }} - {{ artist }}"
 update_hooks() {
     while IFS= read -r id
     do
-        polybar-msg -p "$id" hook spotify-play-pause $2 1>/dev/null 2>&1
+        polybar-msg -p "$id" hook player-play-pause $2 1>/dev/null 2>&1
     done < <(echo "$1")
 }
 
