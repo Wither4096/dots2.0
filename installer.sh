@@ -42,7 +42,7 @@ makepkg -si
 
 #yay -S librewolf-bin vscodium-bin openrgb-bin rofi-greenclip betterlockscreen ani-cli spotify mpd-notification ani-cli
 
-yay -S vscodium-bin openrgb-bin rofi-greenclip betterlockscreen mpd-mpris-bin python-yams yt-dlp
+yay -S vscodium-bin openrgb-bin rofi-greenclip betterlockscreen mpd-mpris-bin python-yams yt-dlp feishin-bin
 
 sudo cp $RUNDIR/X11/ /etc/
 
