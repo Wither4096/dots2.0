@@ -10,6 +10,8 @@
 /*****----- Configuration -----*****/
 configuration {
     show-icons:                 false;
+    kb-row-down: "j,l";
+    kb-row-up: "h,k";
 }
 
 /*****----- Global Properties -----*****/
