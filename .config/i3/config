@@ -228,6 +228,7 @@ gaps outer 10
 
 #Window Compositor
 #exec_always picom -f --vsync --blur-background 
+exec_always picom --config ~/.config/picom/picom.conf
 
 #Screenshot
 bindsym --release $mod+Shift+s exec import png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S").png|xclip -selection clipboard -t image/png
@@ -265,3 +266,6 @@ bindcode 195 exec "dunstctl set-paused toggle"
 bindcode 196 exec "playerctl previous --player=Feishin,spotify,mpd"
 bindcode 197 exec "playerctl next --player=Feishin,spotify,mpd" 
 bindcode 198 exec "playerctl stop --player=Feishin,spotify,mpd" 
+
+#Map Caps Lock to Super
+exec_always setxkbmap -option caps:super
