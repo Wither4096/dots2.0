@@ -264,8 +264,8 @@ bindcode 167 exec "playerctl volume .01+ --player=Feishin,spotify,mpd"
 bindcode 181 exec "playerctl play-pause --player=Feishin,spotify,mpd"
 #Macropad
 bindcode 195 exec "dunstctl set-paused toggle"
-bindcode 196 exec "playerctl stop --player=Feishin,spotify,mpd"
-bindcode 197 exec "playerctl previous --player=Feishin,spotify,mpd"
+bindcode 196 exec "playerctl previous --player=Feishin,spotify,mpd"
+bindcode 197 exec "playerctl stop --player=Feishin,spotify,mpd"
 bindcode 198 exec "playerctl next --player=Feishin,spotify,mpd"
 bindcode 202 exec "pamixer --source rnnoise_source -t"
 
