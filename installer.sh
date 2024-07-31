@@ -4,7 +4,7 @@
 
 RUNDIR=$(dirname $0)
 
-sudo pacman -S fish xorg xorg-xinit i3-wm kitty polkit polkit-gnome numlockx feh rofi polybar zip unzip intel-ucode pipewire-pulse pamixer nvidia nvidia-utils nvidia-settings fastfetch figlet lolcat thunar tumbler ffmpegthumbnailer ntfs-3g picom ttf-font-awesome ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-dejavu sassc btop discord mpv i2c-tools exfat-utils udiskie keepassxc newsboat zathura zathura-pdf-mupdf imagemagick dunst xclip mpc ncmpcpp mpd playerctl xournalpp spotify-launcher firefox #krita texlive qutebrowser vlc jdk-openjdk jre-openjdk code gtk-engine-murrine terminator lxappearance easyeffects lsp-plugins
+sudo pacman -S fish xorg xorg-xinit i3-wm kitty polkit polkit-gnome numlockx feh rofi polybar zip unzip intel-ucode pipewire-pulse pamixer nvidia-open nvidia-utils nvidia-settings fastfetch figlet lolcat thunar tumbler ffmpegthumbnailer ntfs-3g picom ttf-font-awesome ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-dejavu sassc btop discord mpv i2c-tools exfat-utils udiskie keepassxc newsboat imagemagick dunst xclip mpc ncmpcpp mpd playerctl spotify-launcher firefox #krita texlive qutebrowser vlc jdk-openjdk jre-openjdk code gtk-engine-murrine terminator lxappearance easyeffects lsp-plugins xournalpp zathura zathura-pdf-mupdf 
 
 #sudo pacman -S v4l2loopback-dkms v4l2loopback-utils linux-headers obs-studio
 
@@ -30,8 +30,6 @@ cp $RUNDIR/.bashrc $HOME
 
 cp $RUNDIR/.Xresources $HOME
 
-cp $RUNDIR/vencord-settings-backup.json $HOME
-
 cp $RUNDIR/.local/bin $HOME/.local
 
 git clone https://aur.archlinux.org/yay.git
@@ -44,7 +42,7 @@ makepkg -si
 
 yay -S vscodium-bin openrgb-bin rofi-greenclip betterlockscreen mpd-mpris-bin python-yams yt-dlp feishin-bin
 
-sudo cp $RUNDIR/X11/ /etc/
+sudo cp -r $RUNDIR/X11/ /etc/
 
 cp /etc/default/grub ~/
 
