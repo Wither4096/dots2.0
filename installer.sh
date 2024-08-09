@@ -4,7 +4,7 @@
 
 RUNDIR=$(dirname $0)
 
-sudo pacman -S fish xorg xorg-xinit i3-wm kitty polkit polkit-gnome numlockx feh rofi polybar zip unzip intel-ucode pipewire-pulse pamixer nvidia-open nvidia-utils fastfetch figlet lolcat thunar tumbler ffmpegthumbnailer ntfs-3g picom ttf-font-awesome ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts btop discord mpv i2c-tools openrgb exfat-utils udiskie keepassxc newsboat imagemagick dunst xclip mpc ncmpcpp mpd playerctl spotify-launcher firefox #krita texlive qutebrowser vlc jdk-openjdk jre-openjdk code gtk-engine-murrine lxappearance easyeffects lsp-plugins xournalpp zathura zathura-pdf-mupdf ttf-dejavu sassc nvidia-settings 
+sudo pacman -S fish xorg xorg-xinit i3-wm kitty polkit polkit-gnome numlockx feh rofi polybar zip unzip intel-ucode pipewire-pulse pamixer nvidia-open nvidia-utils fastfetch figlet thunar tumbler ffmpegthumbnailer ntfs-3g picom ttf-font-awesome ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts btop discord mpv i2c-tools openrgb exfat-utils udiskie keepassxc newsboat imagemagick dunst xclip mpc ncmpcpp mpd playerctl spotify-launcher firefox #krita texlive qutebrowser vlc jdk-openjdk jre-openjdk code gtk-engine-murrine lxappearance easyeffects lsp-plugins xournalpp zathura zathura-pdf-mupdf ttf-dejavu sassc nvidia-settings lolcat
 
 #sudo pacman -S v4l2loopback-dkms v4l2loopback-utils linux-headers obs-studio
 
@@ -32,9 +32,9 @@ cp $RUNDIR/.Xresources $HOME
 
 cp $RUNDIR/.local/bin $HOME/.local
 
-git clone https://aur.archlinux.org/yay.git
+git clone https://aur.archlinux.org/yay-bin.git
 
-cd yay
+cd yay-bin
 
 makepkg -si
 
