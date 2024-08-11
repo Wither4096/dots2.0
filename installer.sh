@@ -34,6 +34,14 @@ cp $RUNDIR/.vimrc $HOME
 
 cp -r $RUNDIR/.vim $HOME
 
+curl -LO https://github.com/werman/noise-suppression-for-voice/releases/latest/download/linux-rnnoise.zip
+
+mkdir -p ~/.local/share/noise-suppression
+
+unzip linux-rnnoise.zip -d ~/.local/share/noise-suppression
+
+systemctl --user enable --now pipewire.service
+
 git clone https://aur.archlinux.org/yay-bin.git
 
 cd yay-bin
