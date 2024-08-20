@@ -3,7 +3,11 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'jesseleite/vim-agriculture'
 Plug 'vim-airline/vim-airline'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
+
+colorscheme dracula
+set termguicolors
 
 " air-line
 let g:airline_powerline_fonts = 1
