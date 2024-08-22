@@ -2,7 +2,7 @@
 
 RUNDIR=$(dirname $0)
 
-sudo pacman -S qemu libvirt virt-manager iptables-nft dnsmasq dmidecode
+sudo pacman -S qemu libvirt virt-manager iptables-nft dnsmasq #dmidecode
 
 sudo systemctl enable libvirtd.service --now
 
@@ -16,7 +16,7 @@ sudo sed -i '85s/.//' /etc/libvirt/libvirtd.conf
 
 sudo sed -i '95s/.//' /etc/libvirt/libvirtd.conf
 
-sudo cp $RUNDIR/90-usb-libvirt-hotplug.rules /etc/udev/rules.d/
+#sudo cp $RUNDIR/90-usb-libvirt-hotplug.rules /etc/udev/rules.d/
 
 sudo sed -i "s/GRUB_CMDLINE_LINUX_DEFAULT=\"/&intel_iommu=on /" "/etc/default/grub"
 
@@ -28,4 +28,4 @@ sudo mkinitcpio -P
 
 sudo usermod -a -G libvirt $(whoami)
 
-newgrp libvirt
+#newgrp libvirt
