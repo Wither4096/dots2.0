@@ -255,16 +255,18 @@ exec --no-startup-id xset s noblank
 bindcode 121 exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status"
 bindcode 122 exec --no-startup-id "pamixer -d 1 && $refresh_i3status"
 bindcode 123 exec --no-startup-id "pamixer -i 1 && $refresh_i3status"
-bindcode 166 exec "playerctl volume .01- --player=Feishin,spotify,mpd"
-bindcode 167 exec "playerctl volume .01+ --player=Feishin,spotify,mpd"
-bindcode 181 exec "playerctl play-pause --player=Feishin,spotify,mpd"
+bindcode 166 exec "playerctl volume .01- --player=$(cat ~/.cache/player)"
+bindcode 167 exec "playerctl volume .01+ --player=$(cat ~/.cache/player)"
+bindcode 181 exec "playerctl play-pause --player=$(cat ~/.cache/player)"
 #Macropad
 # Horizontol
- bindcode 191 --release exec import -window root png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S")-full.png|xclip -selection clipboard -t image/png
- bindcode 195 exec "dunstctl set-paused toggle"
- bindcode 196 exec "playerctl previous --player=Feishin,spotify,mpd"
- bindcode 197 exec "playerctl stop --player=Feishin,spotify,mpd"
- bindcode 198 exec "playerctl next --player=Feishin,spotify,mpd"
+ bindcode 195 exec "if cat ~/.cache/player |grep -q 'Feishin'; then echo spotify|tee ~/.cache/player;  elif cat ~/.cache/player |grep -q 'spotify'; then echo mpd|tee ~/.cache/player; elif cat ~/.cache/player |grep -q 'mpd'; then echo Feishin|tee ~/.cache/player;fi"
+#"$(echo $(cat ~/.cache/player)|awk '{print tolower($0)}')"
+ bindcode 196 exec "playerctl previous --player=$(cat ~/.cache/player)"
+ bindcode 197 exec "playerctl stop --player=$(cat ~/.cache/player)"
+ bindcode 198 exec "playerctl next --player=$(cat ~/.cache/player)"
+ bindcode 199 --release exec import -window root png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S")-full.png|xclip -selection clipboard -t image/png
+ bindcode 200 exec "dunstctl set-paused toggle"
  bindcode 202 exec "pamixer --source rnnoise_source -t"
 # Vertical
 #  bindcode 198 --release exec exec import -window root png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S")-full.png|xclip -selection clipboard -t image/png
