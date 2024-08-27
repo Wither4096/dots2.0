@@ -260,18 +260,19 @@ bindcode 167 exec "playerctl volume .01+ --player=Feishin,spotify,mpd"
 bindcode 181 exec "playerctl play-pause --player=Feishin,spotify,mpd"
 #Macropad
 # Horizontol
-# bindcode 191 --release exec import -window root png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S")-full.png|xclip -selection clipboard -t image/png
-# bindcode 195 exec "dunstctl set-paused toggle"
-# bindcode 196 exec "playerctl previous --player=Feishin,spotify,mpd"
-# bindcode 197 exec "playerctl stop --player=Feishin,spotify,mpd"
-# bindcode 198 exec "playerctl next --player=Feishin,spotify,mpd"
-# bindcode 202 exec "pamixer --source rnnoise_source -t"
-# Vertical
- bindcode 193 exec "playerctl previous"
- bindcode 197 exec "playerctl stop"
- bindcode 201 exec "playerctl next"
+ bindcode 191 --release exec import -window root png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S")-full.png|xclip -selection clipboard -t image/png
  bindcode 195 exec "dunstctl set-paused toggle"
- bindcode 199 exec "pamixer --source rnnoise_source -t"
+ bindcode 196 exec "playerctl previous --player=Feishin,spotify,mpd"
+ bindcode 197 exec "playerctl stop --player=Feishin,spotify,mpd"
+ bindcode 198 exec "playerctl next --player=Feishin,spotify,mpd"
+ bindcode 202 exec "pamixer --source rnnoise_source -t"
+# Vertical
+#  bindcode 198 --release exec exec import -window root png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S")-full.png|xclip -selection clipboard -t image/png
+#  bindcode 192 exec "playerctl previous"
+#  bindcode 196 exec "playerctl stop"
+#  bindcode 200 exec "playerctl next"
+#  bindcode 195 exec "dunstctl set-paused toggle"
+#  bindcode 199 exec "pamixer --source rnnoise_source -t"
 #Other
 bindsym --release $mod+Shift+s exec import png:-|tee $HOME/Pictures/Screenshots/$(date +"%d-%b-%H-%M-%S").png|xclip -selection clipboard -t image/png
 bindsym $mod+P exec ~/.config/rofi/powermenu/powermenu.sh
