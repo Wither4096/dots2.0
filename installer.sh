@@ -14,6 +14,8 @@ mkdir -p $HOME/Pictures/Screenshots/
 
 cp -r $RUNDIR/.config $HOME
 
+mkdir $HOME/.config/mpd/playlists
+
 sudo mv $RUNDIR/.themes/* /usr/share/themes
 
 sudo mv $RUNDIR/.icons/* /usr/share/icons
