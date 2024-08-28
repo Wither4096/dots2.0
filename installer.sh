@@ -36,6 +36,8 @@ cp $RUNDIR/.vimrc $HOME
 
 cp -r $RUNDIR/.vim $HOME
 
+cp $RUNDIR/99-noto-reject-nastaliq.conf /etc/fonts/conf.d/99-noto-reject-nastaliq.conf
+
 curl -LO https://github.com/werman/noise-suppression-for-voice/releases/latest/download/linux-rnnoise.zip
 
 mkdir -p ~/.local/share/noise-suppression
