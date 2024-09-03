@@ -280,4 +280,4 @@ bindsym --release $mod+Shift+s exec import png:-|tee $HOME/Pictures/Screenshots/
 bindsym $mod+P exec ~/.config/rofi/powermenu/powermenu.sh
 
 #Map Caps Lock to Super
-exec_always setxkbmap -option caps:super
+#exec_always setxkbmap -option caps:super
