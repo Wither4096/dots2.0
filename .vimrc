@@ -8,6 +8,7 @@ call plug#end()
 
 colorscheme dracula
 set termguicolors
+set viminfofile=NONE
 
 " air-line
 let g:airline_powerline_fonts = 1

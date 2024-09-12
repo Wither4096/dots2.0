@@ -260,7 +260,8 @@ bindcode 167 exec "playerctl volume .01+ --player=$(cat ~/.cache/player)"
 bindcode 181 exec "playerctl play-pause --player=$(cat ~/.cache/player)"
 #Macropad
 # Horizontol
- bindcode 195 exec "if cat ~/.cache/player |grep -q 'Feishin'; then echo spotify|tee ~/.cache/player;  elif cat ~/.cache/player |grep -q 'spotify'; then echo mpd|tee ~/.cache/player; elif cat ~/.cache/player |grep -q 'mpd'; then echo Feishin|tee ~/.cache/player;fi"
+# bindcode 195 exec "if cat ~/.cache/player |grep -q 'Feishin'; then echo spotify|tee ~/.cache/player;  elif cat ~/.cache/player |grep -q 'spotify'; then echo mpd|tee ~/.cache/player; elif cat ~/.cache/player |grep -q 'mpd'; then echo Feishin|tee ~/.cache/player;fi"
+ bindcode 195 exec "playerctl shuffle toggle --player=$(cat ~/.cache/player)"
 #"$(echo $(cat ~/.cache/player)|awk '{print tolower($0)}')"
  bindcode 196 exec "playerctl previous --player=$(cat ~/.cache/player)"
  bindcode 197 exec "playerctl stop --player=$(cat ~/.cache/player)"
