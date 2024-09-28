@@ -4,7 +4,7 @@
 
 RUNDIR=$(dirname $0)
 
-sudo pacman -S fish xorg xorg-xinit i3-wm kitty polkit polkit-gnome numlockx feh rofi polybar zip unzip intel-ucode pipewire-pulse pamixer nvidia-open nvidia-utils fastfetch thunar tumbler ffmpegthumbnailer ntfs-3g picom ttf-nerd-fonts-symbols ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts btop discord mpv i2c-tools openrgb exfat-utils udiskie keepassxc newsboat imagemagick dunst xclip mpc ncmpcpp mpd playerctl spotify-launcher firefox #krita texlive qutebrowser vlc jdk-openjdk jre-openjdk code gtk-engine-murrine lxappearance easyeffects lsp-plugins xournalpp zathura zathura-pdf-mupdf ttf-dejavu sassc nvidia-settings lolcat figlet v4l2loopback-dkms v4l2loopback-utils linux-headers obs-studio ttf-font-awesome
+sudo pacman -S os-prober fish xorg xorg-xinit i3-wm kitty polkit polkit-gnome feh rofi polybar zip unzip intel-ucode pipewire-pulse pamixer nvidia-open nvidia-utils fastfetch thunar tumbler ffmpegthumbnailer ntfs-3g picom ttf-nerd-fonts-symbols ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts btop discord mpv exfat-utils udiskie keepassxc imagemagick dunst xclip playerctl spotify-launcher firefox #krita texlive qutebrowser vlc jdk-openjdk jre-openjdk code gtk-engine-murrine lxappearance easyeffects lsp-plugins xournalpp zathura zathura-pdf-mupdf ttf-dejavu sassc nvidia-settings lolcat figlet v4l2loopback-dkms v4l2loopback-utils linux-headers obs-studio ttf-font-awesome numlockx i2c-tools openrgb newsboat mpc ncmpcpp mpd 
 
 cp -r $RUNDIR/.wallpapers $HOME
 
@@ -56,10 +56,19 @@ makepkg -si
 
 yay -S rofi-greenclip mpd-mpris-bin feishin-bin
 
-sudo mv -r $RUNDIR/X11 /etc/
+#sudo mv -r $RUNDIR/X11 /etc/
 
-cp /etc/default/grub ~/
+sudo cp $RUNDIR/X11/xorg.conf.i /etc/X11/
 
-printf "GRUB_GFXMODE=1360x768\nGRUB_BACKGROUND="/home/wither/.wallpapers/grubbg.png"" |sudo tee -a /etc/default/grub
+sudo cp $RUNDIR/X11/xorg.conf.n /etc/X11/
+
+sudo cp $RUNDIR/X11/xorg.conf.d/50-mouse-acceleration.conf /etc/X11/xorg.conf.d
+
+cp /etc/default/grub /etc/default/grub.old
+
+sudo cp -r $RUNDIR/dracula /boot/grub/themes/dracula
+
+#printf "GRUB_GFXMODE=1360x768\nGRUB_BACKGROUND="/home/wither/.wallpapers/grubbg.png"" |sudo tee -a /etc/default/grub
+printf "GRUB_GFXMODE=1360x768\nGRUB_DISABLE_OS_PROBER=false\nGRUB_THEME="/boot/grub/themes/dracula/theme.txt""|sudo tee -a /etc/default/grub
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
