@@ -8,13 +8,13 @@ sudo pacman -S os-prober fish xorg xorg-xinit i3-wm kitty polkit polkit-gnome fe
 
 cp -r $RUNDIR/.wallpapers $HOME
 
-echo "i2c-dev" |sudo tee /etc/modules-load.d/i2c-dev.conf #Allows i2c-dev to start automatically at boot 
+#echo "i2c-dev" |sudo tee /etc/modules-load.d/i2c-dev.conf #Allows i2c-dev to start automatically at boot 
 
 mkdir -p $HOME/Pictures/Screenshots/
 
 cp -r $RUNDIR/.config $HOME
 
-mkdir $HOME/.config/mpd/playlists
+#mkdir $HOME/.config/mpd/playlists
 
 sudo mv $RUNDIR/.themes/* /usr/share/themes
 
@@ -30,13 +30,13 @@ cp $RUNDIR/.bashrc $HOME
 
 cp $RUNDIR/.Xresources $HOME
 
-cp -r $RUNDIR/.local/bin $HOME/.local/bin
+cp -r $RUNDIR/.local/bin $HOME/.local/
 
 cp $RUNDIR/.vimrc $HOME
 
 cp -r $RUNDIR/.vim $HOME
 
-sudo cp $RUNDIR/99-noto-reject-nastaliq.conf /etc/fonts/conf.d/99-noto-reject-nastaliq.conf
+sudo cp $RUNDIR/99-noto-reject-nastaliq.conf /etc/fonts/conf.d/
 
 curl -LO https://github.com/werman/noise-suppression-for-voice/releases/latest/download/linux-rnnoise.zip
 
@@ -54,7 +54,7 @@ makepkg -si
 
 #yay -S librewolf-bin vscodium-bin openrgb-bin rofi-greenclip betterlockscreen ani-cli spotify mpd-notification ani-cli vscodium-bin betterlockscreen python-yams yt-dlp
 
-yay -S rofi-greenclip mpd-mpris-bin feishin-bin
+yay -S rofi-greenclip feishin-bin #mpd-mpris-bin
 
 #sudo mv -r $RUNDIR/X11 /etc/
 
@@ -66,7 +66,7 @@ sudo cp $RUNDIR/X11/xorg.conf.d/50-mouse-acceleration.conf /etc/X11/xorg.conf.d
 
 cp /etc/default/grub /etc/default/grub.old
 
-sudo cp -r $RUNDIR/dracula /boot/grub/themes/dracula
+sudo cp -r $RUNDIR/dracula /boot/grub/themes
 
 #printf "GRUB_GFXMODE=1360x768\nGRUB_BACKGROUND="/home/wither/.wallpapers/grubbg.png"" |sudo tee -a /etc/default/grub
 printf "GRUB_GFXMODE=1360x768\nGRUB_DISABLE_OS_PROBER=false\nGRUB_THEME="/boot/grub/themes/dracula/theme.txt""|sudo tee -a /etc/default/grub
