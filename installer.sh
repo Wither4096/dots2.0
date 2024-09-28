@@ -58,15 +58,15 @@ yay -S rofi-greenclip feishin-bin #mpd-mpris-bin
 
 #sudo mv -r $RUNDIR/X11 /etc/
 
-sudo cp $RUNDIR/X11/xorg.conf.i /etc/X11/
+sudo cp X11/xorg.conf.i /etc/X11/
 
-sudo cp $RUNDIR/X11/xorg.conf.n /etc/X11/
+sudo cp X11/xorg.conf.n /etc/X11/
 
-sudo cp $RUNDIR/X11/xorg.conf.d/50-mouse-acceleration.conf /etc/X11/xorg.conf.d
+sudo cp X11/xorg.conf.d/50-mouse-acceleration.conf /etc/X11/xorg.conf.d
 
-cp /etc/default/grub /etc/default/grub.old
+sudo cp /etc/default/grub /etc/default/grub.old
 
-sudo cp -r $RUNDIR/dracula /boot/grub/themes
+sudo cp -r dracula /boot/grub/themes
 
 #printf "GRUB_GFXMODE=1360x768\nGRUB_BACKGROUND="/home/wither/.wallpapers/grubbg.png"" |sudo tee -a /etc/default/grub
 printf "GRUB_GFXMODE=1360x768\nGRUB_DISABLE_OS_PROBER=false\nGRUB_THEME="/boot/grub/themes/dracula/theme.txt""|sudo tee -a /etc/default/grub
