@@ -2,11 +2,11 @@
 
 sudo pacman -S os-prober fish xorg xorg-xinit i3-wm kitty polkit polkit-gnome feh rofi polybar zip unzip intel-ucode pipewire-pulse pamixer nvidia-open nvidia-utils fastfetch thunar tumbler ffmpegthumbnailer ntfs-3g ttf-nerd-fonts-symbols ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts btop discord mpv exfat-utils udiskie keepassxc imagemagick dunst xclip playerctl firefox #krita nvidia-settings obs-studio numlockx i2c-tools openrgb newsboat mpc ncmpcpp mpd picom spotify-launcher 
 
-sudo cp X11/xorg.conf.i /etc/X11/
-sudo cp X11/xorg.conf.n /etc/X11/
-sudo cp X11/xorg.conf.d/50-mouse-acceleration.conf /etc/X11/xorg.conf.d
+sudo mv X11/xorg.conf.i /etc/X11/
+sudo mv X11/xorg.conf.n /etc/X11/
+sudo mv X11/xorg.conf.d/50-mouse-acceleration.conf /etc/X11/xorg.conf.d
 sudo cp /etc/default/grub /etc/default/grub.old
-sudo cp -r dracula /boot/grub/themes
+sudo mv dracula /boot/grub/themes
 
 cp -r .config $HOME
 mv .wallpapers $HOME/.config/
