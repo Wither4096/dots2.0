@@ -226,41 +226,44 @@ input "1267:12729:ASUE140D:00_04F3:31B9_Touchpad" {
 	tap enabled
 }
 
+# Remap Caps to Super
+input type:keyboard {
+	xkb_options caps:super
+}
 
-
-#Hide title bar
+# Hide title bar
 default_border none
 default_floating_border none
 titlebar_padding 1
 titlebar_border_thickness 0
 
-#Gaps
+# Gaps
 for_window [class=".*"] border pixel 2
 gaps outer 10
 gaps inner 10
 
-#Window Colours
+# Window Colours
 client.focused          #ff79c6 #44475a #f8f8f2 #6272a4 #bd93f9
 client.unfocused        #282a36 #282a36 #f8f8f2 #44475a #44475a
 client.background       #f8f8f2
 
-#Wallpaper
+# Wallpaper
 output * bg ~/.config/.wallpapers/wallpaper.png fill
 
-#Waybar
+# Waybar
 exec waybar -c ~/.config/waybar/top.jsonc
 exec waybar -c ~/.config/waybar/bottom.jsonc
 
-#Powermenu
+# Powermenu
 bindsym $mod+P exec ~/.config/rofi/powermenu/powermenu.sh
 
-#udiskie
+# udiskie
 exec_always udiskie
 
-#Polkit GUI
+# Polkit GUI
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
-#Theme
+# Theme
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
