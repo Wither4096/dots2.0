@@ -18,7 +18,8 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wmenu | xargs swaymsg exec --
+set $menu rofi -show drun
+#set $menu dmenu_path | wmenu | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -246,8 +247,28 @@ client.background       #f8f8f2
 #Wallpaper
 output * bg ~/.config/.wallpapers/wallpaper.png fill
 
+#Waybar
+exec waybar -c ~/.config/waybar/top.jsonc
+exec waybar -c ~/.config/waybar/bottom.jsonc
+
+#Powermenu
+bindsym $mod+P exec ~/.config/rofi/powermenu/powermenu.sh
+
+#udiskie
+exec_always udiskie
+
 #Polkit GUI
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+#Theme
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+	gsettings set $gnome-schema gtk-theme 'gtk-master'
+	gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+	gsettings set $gnome-schema cursor-theme 'Dracula-cursors'
+	gsettings set $gnome-schema font-name 'Cantarell 11'
+}
 
 
 
