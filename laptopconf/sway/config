@@ -274,18 +274,14 @@ exec_always {
 }
 
 # Assingments
-for_window [class="firefox"] move to workspace $ws2
-for_window [class="VSCodium"] move to workspace $ws3
-for_window [class="Xournalpp"] move to workspace $ws3
-for_window [class="steam"] move to workspace $ws3
-for_window [class="heroic"] move to workspace $ws3
-for_window [class="mpv"] move to workspace $ws4
-for_window [class="Virt-manager"] move to workspace $ws4
-for_window [class="KeePassXC"] move to workspace $ws7
-for_window [class="Thunar"] move to workspace $ws8
-for_window [class="feishin"] move to workspace $ws9
-for_window [class="Spotify"] move to workspace $ws9
-for_window [class="discord"] move to workspace $ws10
+assign [app_id="firefox"] workspace number 2
+assign [app_id="VSCodium"] workspace number 3
+assign [app_id="mpv"] workspace number 4
+assign [app_id="Virt-manager"] workspace number 4
+assign [app_id="KeePassXC"] workspace number 7
+assign [app_id="Thunar"] workspace number 8
+assign [app_id="Spotify"] workspace number 9
+assign [app_id="discord"] workspace number 10
 
 # Hotkeys
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
@@ -295,7 +291,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Display Sleep
 exec swayidle -w \
-timeout 60 'swaylock -f -c 000000' \
 timeout 180 'swaymsg "output * power off"' resume 'swaymsg "output * power on"'
 
 
