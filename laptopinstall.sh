@@ -5,7 +5,7 @@ sudo pacman -S os-prober fish sway swaybg kitty polkit polkit-gnome feh zip unzi
 sudo cp /etc/default/grub /etc/default/grub.old
 sudo mv dracula /boot/grub/themes
 
-cp -a laptopconf/* $HOME/.config
+cp -r laptopconf/ $HOME/.config
 mv .wallpapers $HOME/.config/
 mv .local/bin $HOME/.local/bin/
 sudo mv .themes/* /usr/share/themes
