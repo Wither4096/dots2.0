@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S os-prober fish sway swaybg kitty polkit polkit-gnome feh zip unzip amd-ucode pipewire-pulse pamixer mesa fastfetch thunar tumbler ffmpegthumbnailer xdg-user-dirs ntfs-3g ttf-nerd-fonts-symbols ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts btop discord mpv exfat-utils udiskie keepassxc imagemagick dunst playerctl firefox spotify-launcher 
+sudo pacman -S os-prober fish sway swaybg rofi-wayland waybar kitty polkit polkit-gnome feh zip unzip amd-ucode pipewire-pulse mesa fastfetch thunar tumbler ffmpegthumbnailer xdg-user-dirs ntfs-3g ttf-nerd-fonts-symbols ttf-jetbrains-mono noto-fonts-cjk noto-fonts-emoji noto-fonts btop discord mpv exfat-utils udiskie keepassxc imagemagick dunst playerctl firefox spotify-launcher 
 
 sudo cp /etc/default/grub /etc/default/grub.old
 sudo mv dracula /boot/grub/themes
